@@ -18,6 +18,6 @@ from django.urls import path
 from admin_auth import views as admin_auth
 
 urlpatterns = [
-    path('admin/login/',admin_auth.show_login, name='admin.show_login'),
+    path('admin/login/', admin_auth.login, name='admin.login'),
     path('admin/', admin.site.urls),
 ]
