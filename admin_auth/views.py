@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .forms import LoginForm
 
 from django.http import HttpResponse
 
 def login(request):
-    return render(request, 'admin/login.html');
+    loginForm = LoginForm()
+    return render(request, 'admin/login.html', context={'form':loginForm});
